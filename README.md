@@ -26,10 +26,13 @@ Setting up and running the tool is easy:
     If this is missing or empty, the tool will assume that the process name is dotnet.exe.
     
 •	You need to run the tool in an elevated command prompt.
+
 •	If you run the tool with /? or -h switch it will show the instructions and some sample commands for capturing memory dumps.
+
 •	If you run the tool without any switch or with -l or --list switch, it will list the processes hosting the ASP.NET Core application, if there is any ASP.NET Core app running:
+
 •	ProcDump is used to capture the memory dumps. Usual ProcDump switches work as expected.
-•	To attach ProcDump and capture dumps, you need to give the name of the IIS application pool as first parameter and then add the usual ProcDump switch.
-  For example, run the following command to creat first chance exception dumps in the c:\dumps folder for the processes running with “Def Leppard Fan Site” application pool:
+
+•	To attach ProcDump and capture dumps, you need to give the name of the IIS application pool as first parameter and then add the usual ProcDump switch. For example, run the following command to creat first chance exception dumps in the c:\dumps folder for the processes running with “Def Leppard Fan Site” application pool:
     
     ListAspNetCoreProcs.exe "Def Leppard Fan Site" -e 1 -f * c:\dumps.
